@@ -1,97 +1,326 @@
-import React, { useState, useEffect } from "react";
-import { View, Text, StyleSheet } from "react-native";
-import * as Location from "expo-location";
+import React from "react";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Platform,
+  StatusBar,
+  useWindowDimensions,
+  Image,
+  ScrollView,
+} from "react-native";
 
-const App = () => {
-  const [speed, setSpeed] = useState<number | null>(null);
-  const [locationPermission, setLocationPermission] = useState<boolean>(false);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
+import { SafeAreaView } from "react-native-safe-area-context";
+import { TabView, SceneMap, TabBar } from "react-native-tab-view";
+import AntDesign from "@expo/vector-icons/AntDesign";
+const FirstRoute = () => (
+  <View style={{ flex: 1, backgroundColor: "#ccc" }}>
+    <ScrollView>
+      <View style={{ height: 150 }}>
+        <ScrollView
+          horizontal={true}
+          contentContainerStyle={{
+            alignItems: "center",
+            //justifyContent: "space-around",
+            flexDirection: "row",
 
-  useEffect(() => {
-    const getLocationPermission = async () => {
-      let { status } = await Location.requestForegroundPermissionsAsync();
-      if (status === "granted") {
-        setLocationPermission(true);
-      } else {
-        setLocationPermission(false);
-      }
-    };
+            //height: 150,
+            //borderWidth: 1,
+          }}
+        >
+          <Image
+            style={styles.imgContainer}
+            source={{
+              uri: "https://reactnative.dev/img/tiny_logo.png",
+            }}
+          />
+          <Image
+            style={styles.imgContainer}
+            source={{
+              uri: "https://reactnative.dev/img/tiny_logo.png",
+            }}
+          />
+          <Image
+            style={styles.imgContainer}
+            source={{
+              uri: "https://reactnative.dev/img/tiny_logo.png",
+            }}
+          />
+          <Image
+            style={styles.imgContainer}
+            source={{
+              uri: "https://reactnative.dev/img/tiny_logo.png",
+            }}
+          />
+          <Image
+            style={styles.imgContainer}
+            source={{
+              uri: "https://reactnative.dev/img/tiny_logo.png",
+            }}
+          />
+          <Image
+            style={styles.imgContainer}
+            source={{
+              uri: "https://reactnative.dev/img/tiny_logo.png",
+            }}
+          />
+          <Image
+            style={styles.imgContainer}
+            source={{
+              uri: "https://reactnative.dev/img/tiny_logo.png",
+            }}
+          />
+          <Image
+            style={styles.imgContainer}
+            source={{
+              uri: "https://reactnative.dev/img/tiny_logo.png",
+            }}
+          />
+          <Image
+            style={styles.imgContainer}
+            source={{
+              uri: "https://reactnative.dev/img/tiny_logo.png",
+            }}
+          />
+          <Image
+            style={styles.imgContainer}
+            source={{
+              uri: "https://reactnative.dev/img/tiny_logo.png",
+            }}
+          />
+          <Image
+            style={styles.imgContainer}
+            source={{
+              uri: "https://reactnative.dev/img/tiny_logo.png",
+            }}
+          />
+          <Image
+            style={styles.imgContainer}
+            source={{
+              uri: "https://reactnative.dev/img/tiny_logo.png",
+            }}
+          />
+          <Image
+            style={styles.imgContainer}
+            source={{
+              uri: "https://reactnative.dev/img/tiny_logo.png",
+            }}
+          />
+        </ScrollView>
+      </View>
+      <View style={{ flexDirection: "row" }}>
+        <Text style={{ fontWeight: 800 }}>Энэ сарын онцлох</Text>
+        <AntDesign name="star" size={18} color="gold" />
+      </View>
+      <View style={{}}>
+        <Text style={{ fontSize: 10 }}>Аудио ном</Text>
+      </View>
+      <ScrollView
+        horizontal={true}
+        contentContainerStyle={{
+          alignItems: "center",
+          //justifyContent: "space-around",
+          flexDirection: "row",
 
-    getLocationPermission();
-  }, []);
+          //height: 150,
+          //borderWidth: 1,
+        }}
+      >
+        <ScrollView horizontal={true}>
+          <View>
+            <Image
+              style={styles.imgContainer}
+              source={{
+                uri: "https://reactnative.dev/img/tiny_logo.png",
+              }}
+            />
+            <Text style={{ color: "gray", marginLeft: 10 }}>James</Text>
+            <Text style={{ fontSize: 10, marginLeft: 10 }}>Shidet muhlag </Text>
+          </View>
+          <View>
+            <Image
+              style={styles.imgContainer}
+              source={{
+                uri: "https://reactnative.dev/img/tiny_logo.png",
+              }}
+            />
+            <Text style={{ color: "gray", marginLeft: 10 }}>James</Text>
+            <Text style={{ fontSize: 10, marginLeft: 10 }}>Shidet muhlag </Text>
+          </View>
+          <View>
+            <Image
+              style={styles.imgContainer}
+              source={{
+                uri: "https://reactnative.dev/img/tiny_logo.png",
+              }}
+            />
+            <Text style={{ color: "gray", marginLeft: 10 }}>James</Text>
+            <Text style={{ fontSize: 10, marginLeft: 10 }}>Shidet muhlag </Text>
+          </View>
+          <View>
+            <Image
+              style={styles.imgContainer}
+              source={{
+                uri: "https://reactnative.dev/img/tiny_logo.png",
+              }}
+            />
+            <Text style={{ color: "gray", marginLeft: 10 }}>James</Text>
+            <Text style={{ fontSize: 10, marginLeft: 10 }}>Shidet muhlag </Text>
+          </View>
+          <View>
+            <Image
+              style={styles.imgContainer}
+              source={{
+                uri: "https://reactnative.dev/img/tiny_logo.png",
+              }}
+            />
+            <Text style={{ color: "gray", marginLeft: 10 }}>James</Text>
+            <Text style={{ fontSize: 10, marginLeft: 10 }}>Shidet muhlag </Text>
+          </View>
+          <View>
+            <Image
+              style={styles.imgContainer}
+              source={{
+                uri: "https://reactnative.dev/img/tiny_logo.png",
+              }}
+            />
+            <Text style={{ color: "gray", marginLeft: 10 }}>James</Text>
+            <Text style={{ fontSize: 10, marginLeft: 10 }}>Shidet muhlag </Text>
+          </View>
+          <View>
+            <Image
+              style={styles.imgContainer}
+              source={{
+                uri: "https://reactnative.dev/img/tiny_logo.png",
+              }}
+            />
+            <Text style={{ color: "gray", marginLeft: 10 }}>James</Text>
+            <Text style={{ fontSize: 10, marginLeft: 10 }}>Shidet muhlag </Text>
+          </View>
+          <View>
+            <Image
+              style={styles.imgContainer}
+              source={{
+                uri: "https://reactnative.dev/img/tiny_logo.png",
+              }}
+            />
+            <Text style={{ color: "gray", marginLeft: 10 }}>James</Text>
+            <Text style={{ fontSize: 10, marginLeft: 10 }}>Shidet muhlag </Text>
+          </View>
+          <View>
+            <Image
+              style={styles.imgContainer}
+              source={{
+                uri: "https://reactnative.dev/img/tiny_logo.png",
+              }}
+            />
+            <Text style={{ color: "gray", marginLeft: 10 }}>James</Text>
+            <Text style={{ fontSize: 10, marginLeft: 10 }}>Shidet muhlag </Text>
+          </View>
+          <View>
+            <Image
+              style={styles.imgContainer}
+              source={{
+                uri: "https://reactnative.dev/img/tiny_logo.png",
+              }}
+            />
+            <Text style={{ color: "gray", marginLeft: 10 }}>James</Text>
+            <Text style={{ fontSize: 10, marginLeft: 10 }}>Shidet muhlag </Text>
+          </View>
+          <View>
+            <Image
+              style={styles.imgContainer}
+              source={{
+                uri: "https://reactnative.dev/img/tiny_logo.png",
+              }}
+            />
+            <Text style={{ color: "gray", marginLeft: 10 }}>James</Text>
+            <Text style={{ fontSize: 10, marginLeft: 10 }}>Shidet muhlag </Text>
+          </View>
+        </ScrollView>
+      </ScrollView>
+      <Text>abc</Text>
+      <Text>abc</Text>
+      <Text>abc</Text>
+      <Text>abc</Text>
+      <Text>abc</Text>
+      <Text>abc</Text>
+      <Text>abc</Text>
+    </ScrollView>
+  </View>
+);
 
-  useEffect(() => {
-    let interval: NodeJS.Timeout | null = null;
+const SecondRoute = () => (
+  <View style={{ flex: 1, backgroundColor: "#673ab7" }}></View>
+);
 
-    const getCarSpeed = async () => {
-      if (!locationPermission) {
-        alert("Location permission is not granted.");
-        return;
-      }
+const ThirdRoute = () => (
+  <View style={{ flex: 1, backgroundColor: "#673ab7" }} />
+);
 
-      const location = await Location.getCurrentPositionAsync({
-        accuracy: Location.Accuracy.High,
-      });
+const renderScene = SceneMap({
+  first: FirstRoute,
+  second: SecondRoute,
+  third: ThirdRoute,
+  a: ThirdRoute,
+  b: ThirdRoute,
+  c: ThirdRoute,
+  d: ThirdRoute,
+  e: ThirdRoute,
+  f: ThirdRoute,
+  g: ThirdRoute,
+  h: ThirdRoute,
+  i: ThirdRoute,
+});
 
-      // Speed is in meters per second (m/s)
-      const speedInMps = location.coords.speed;
+const routes = [
+  { key: "first", title: "Танд зориулсан" },
+  { key: "second", title: "Аудио ном" },
+  { key: "third", title: "Цахим ном" },
+  { key: "a", title: "Цахим ном" },
+  { key: "b", title: "Цахим ном" },
+  { key: "c", title: "Цахим ном" },
+  { key: "d", title: "Цахим ном" },
+  { key: "e", title: "Цахим ном" },
+  { key: "f", title: "Цахим ном" },
+  { key: "g", title: "Цахим ном" },
+  { key: "h", title: "Цахим ном" },
+  { key: "i", title: "Цахим ном" },
+];
 
-      // Convert to km/h
-      const speedInKmh = speedInMps * 3.6;
-      setSpeed(speedInKmh);
-    };
-
-    if (locationPermission) {
-      setIsLoading(false);
-
-      // Start the interval to get the speed every 0.5 seconds
-      interval = setInterval(() => {
-        getCarSpeed();
-      }, 1000); // 500 ms interval (0.5 seconds)
-    }
-
-    return () => {
-      if (interval) clearInterval(interval); // Cleanup on unmount
-    };
-  }, [locationPermission]);
-
+export default function index() {
+  const layout = useWindowDimensions();
+  const [index, setIndex] = React.useState(0);
   return (
-    <View style={styles.container}>
-      {/* <Text style={styles.title}>Car Speed</Text> */}
-      {isLoading ? (
-        <Text style={styles.error}>Loading...</Text>
-      ) : (
-        <>
-          <Text style={styles.speedText}>
-            {speed !== null ? speed.toFixed(2) : "0.00"}
-          </Text>
-          <Text style={styles.speedText}>км/ц</Text>
-        </>
-      )}
-    </View>
+    <SafeAreaView style={styles.container}>
+      <TabView
+        navigationState={{ index, routes }}
+        renderScene={renderScene}
+        onIndexChange={setIndex}
+        initialLayout={{ width: layout.width }}
+        renderTabBar={(props) => (
+          <TabBar
+            {...props}
+            scrollEnabled={true} // Tab-ууд гүйлгэх боломжтой болно
+            style={{ backgroundColor: "orange" }}
+          />
+        )}
+      />
+      <Text>HELLO WORLD</Text>
+    </SafeAreaView>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    padding: 20,
+    backgroundColor: "white",
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
-  title: {
-    fontSize: 24,
-    marginBottom: 20,
-  },
-  speedText: {
-    fontSize: 92,
-    marginTop: 20,
-  },
-  error: {
-    fontSize: 16,
-    color: "red",
-    marginTop: 20,
+  imgContainer: {
+    height: 100,
+    width: 100,
+    marginRight: 10,
+    marginLeft: 10,
   },
 });
-
-export default App;
