@@ -31,7 +31,7 @@ const Index = () => {
       </Pressable>
       <Pressable
         onPress={() => {
-          router.push("/Home/Home2"); // Navigate to Home tab (index view)
+          router.push({ pathname:"/Home/Home2"}); // Navigate to Home tab (index view)
         }}
       >
         <Image

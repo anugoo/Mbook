@@ -2,22 +2,22 @@ import { View, Text, Pressable } from 'react-native';
 import React from 'react';
 import { useRouter } from 'expo-router';
 
-const Home = () => {
+const Home3 = () => {
   const router = useRouter();
 
   return (
     <View>
-      <Text>Home2 page</Text>
+      <Text>Home3 page</Text>
 
       <Pressable
         onPress={() => {
-          router.push("/Home/Home3"); // Navigate to Home tab (index view)
-        }}
+            router.push("/Home/Home2"); // Navigate to Home tab (index view)
+          }}
       >
-        <Text>Next Home</Text>
+        <Text>Back to Home-2</Text>
       </Pressable>
     </View>
   );
 };
 
-export default Home;
+export default Home3;
