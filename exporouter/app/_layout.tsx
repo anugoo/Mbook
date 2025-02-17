@@ -2,17 +2,15 @@ import { Stack } from "expo-router";
 
 const MainLayout = () => {
   return (
-    <Stack screenOptions={{ headerShown: false }}>
-      <Stack.Screen 
-        name="index"  
-        options={{  headerTitle: "Home Page" }} 
-      />
-      <Stack.Screen 
-        name="user/[id]" 
-        options={{   headerTitle: "User Page" }} 
+    <Stack >
+      
+       <Stack.Screen 
+        name="(tabs)"  
+        options={{ headerShown: false}} 
       />
       
-      <Stack.Screen name="*" />
+      
+      <Stack.Screen name="Aboutus" options={{   headerTitle: "About us Page" }}   />
     </Stack>
   );
 };
