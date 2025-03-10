@@ -20,7 +20,7 @@ import groupData from "@/data/groups.json";
 
 const Page = () => {
   const headerHeight = useHeaderHeight();
-  const [category, setCategory] = useState("All");
+  const [category, setCategory] = useState("Бүгд");
 
   const onCatChanged = (category: string) => {
     console.log("Categpry: ", category);
